@@ -45,6 +45,10 @@ class Cars{
         self.stock = stock
         self.price = price
     }
+    
+    func giveOrderInfo() -> String
+        {
+            return "Order --> Distributor : \(distributor) - Name:\(modelName) - Package:\(package) - Color:\(color) - Stock:\(stock) - Price: \(price ?? 0)"
+        }
 }
-
 
