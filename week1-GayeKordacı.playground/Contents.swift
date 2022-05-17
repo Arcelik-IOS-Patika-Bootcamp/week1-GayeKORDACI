@@ -84,3 +84,16 @@ class Cars{
 
 }
 
+
+let order1 = Cars(modelName: "508", package: .gt, color: .blue, stock: 10, price: 900000)
+let order2 = Cars(modelName: "208", package: .allureSelection, color: .yellow, stock: 5, price: 600000)
+let order3 = Cars(modelName: "308", package: .prime, color: .red, stock: 0, price: 750000)
+
+order1.discount(order1.price ?? 0)
+
+order1.createOrder()
+
+order2.createOrder()
+
+order3.createOrder()
+
