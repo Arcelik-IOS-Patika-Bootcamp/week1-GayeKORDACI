@@ -27,5 +27,24 @@ enum StockStatus : String {
     case lowStock = "Kritik stok."
     case normalStock = "Stok var"
 }
+class Cars{
+    var distributor : String = "Peugeot Turkey"
+    var modelName : String = "208"
+    var package : PackageName = .prime
+    var color : Colors = .white
+    private var stock : Int = 0
+    var price : Double?
+    var orderStatus : OrderStatus = .readyForSale
+    var stockStatus : StockStatus = .normalStock
+    
+    
+    init(modelName: String, package: PackageName, color: Colors, stock: Int, price : Double) {
+        self.modelName = modelName
+        self.package = package
+        self.color = color
+        self.stock = stock
+        self.price = price
+    }
+}
 
 
