@@ -16,5 +16,12 @@ enum Colors : Int {
     case blue = 3
     case red = 4
 }
+enum OrderStatus : String{
+    case successed = "Sipariş başarıyla oluşturuldu."
+    case failed = "Sipariş başarısız"
+    case paymentInProcess = "Kapora alındı."
+    case readyForSale = "Satışa hazır."
+}
+
 
 
