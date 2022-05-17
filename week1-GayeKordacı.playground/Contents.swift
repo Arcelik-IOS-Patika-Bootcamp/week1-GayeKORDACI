@@ -71,6 +71,16 @@ class Cars{
                 return true
             }
         }
+    func createOrder(){
+            if !checkOrder() {
+                return
+            }else {
+                orderStatus = .paymentInProcess
+                print(orderStatus.rawValue)
+                print(giveOrderInfo())
+            }
+            
+        }
 
 }
 
