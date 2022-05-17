@@ -9,5 +9,12 @@ enum PackageName :Int{
     case gt = 3
     
 }
+enum Colors : Int {
+    case white = 0
+    case yellow = 1
+    case gray = 2
+    case blue = 3
+    case red = 4
+}
 
 
