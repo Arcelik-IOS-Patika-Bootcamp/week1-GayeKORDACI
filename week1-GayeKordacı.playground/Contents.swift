@@ -55,5 +55,22 @@ class Cars{
             self.price = price * 0.9
             return price
         }
+    func checkOrder() -> Bool {
+            switch stock {
+            case 0:
+                stockStatus = .noStock
+                print(stockStatus.rawValue)
+                return false
+            case 1..<10:
+                stockStatus = .lowStock
+                print(stockStatus.rawValue)
+                return true
+            default:
+                stockStatus = .normalStock
+                print(stockStatus.rawValue)
+                return true
+            }
+        }
+
 }
 
