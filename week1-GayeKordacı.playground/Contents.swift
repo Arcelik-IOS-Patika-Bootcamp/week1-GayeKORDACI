@@ -76,24 +76,51 @@ class Cars{
                 return
             }else {
                 orderStatus = .paymentInProcess
+                orderList.append(modelName)
+                orderAmountList.append(price ?? 0.0)
                 print(orderStatus.rawValue)
                 print(giveOrderInfo())
+                
             }
             
         }
 
 }
 
-
+var orderList :[String] = []
+var orderAmountList :[Double] = [0.0]
+var totalAmount = 0.0
 let order1 = Cars(modelName: "508", package: .gt, color: .blue, stock: 10, price: 900000)
 let order2 = Cars(modelName: "208", package: .allureSelection, color: .yellow, stock: 5, price: 600000)
 let order3 = Cars(modelName: "308", package: .prime, color: .red, stock: 0, price: 750000)
-
+let order4 = Cars(modelName: "508", package: .allureSelection, color: .white, stock: 9, price: 900000)
+let order5 = Cars(modelName: "5008", package: .gt, color: .gray, stock: 3, price: 1200000)
 order1.discount(order1.price ?? 0)
 
 order1.createOrder()
-
 order2.createOrder()
-
 order3.createOrder()
+order4.createOrder()
+order5.createOrder()
+
+var popularModels = Set(orderList)
+print("Sipariş listesi : \(orderList)")
+print("Sipariş ücretleri : \(orderAmountList)")
+print("Popüler modeller : \(popularModels)")
+
+for index in 0..<orderAmountList.count{
+    if !orderAmountList[index].isZero{
+        totalAmount = totalAmount + orderAmountList[index]
+    }
+}
+
+print("Toplam Gelir : \(totalAmount)")
+
+
+
+
+
+
+
+
 
