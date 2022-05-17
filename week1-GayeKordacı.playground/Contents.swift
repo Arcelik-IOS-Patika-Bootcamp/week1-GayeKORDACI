@@ -50,5 +50,10 @@ class Cars{
         {
             return "Order --> Distributor : \(distributor) - Name:\(modelName) - Package:\(package) - Color:\(color) - Stock:\(stock) - Price: \(price ?? 0)"
         }
+    func discount(_ price: Double) -> Double
+        {
+            self.price = price * 0.9
+            return price
+        }
 }
 
