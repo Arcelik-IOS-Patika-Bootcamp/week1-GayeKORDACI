@@ -22,6 +22,10 @@ enum OrderStatus : String{
     case paymentInProcess = "Kapora alındı."
     case readyForSale = "Satışa hazır."
 }
-
+enum StockStatus : String {
+    case noStock = "Stok yok."
+    case lowStock = "Kritik stok."
+    case normalStock = "Stok var"
+}
 
 
